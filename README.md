@@ -1,5 +1,7 @@
 # mountain (MVP)
 
+"Thinking Like a Mountain"
+
 End-to-end skeleton: add feed → backfill from Wayback (first 20 snapshots) → create schedule → (email sender + webhook stubs).
 
 ## Quickstart
