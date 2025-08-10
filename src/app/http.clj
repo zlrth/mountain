@@ -14,7 +14,10 @@
   (let [muunt (m/create (assoc m/default-options :default-format "application/json"))]
     (ring/ring-handler
      (ring/router
-      [["/api/feeds"
+      [["/"
+        {:get (fn [_]
+                (resp/ok "hello world"))}]
+       ["/api/feeds"
         {:post (fn [{:keys [body-params]}]
                  (let [url (:url body-params)
                        id  (db/ensure-feed! ds url)
