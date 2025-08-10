@@ -1,5 +1,6 @@
 (ns ui.core
   (:require [reagent.core :as r]
+            [reagent.dom :as rd]
             [re-frame.core :as rf]
             [ui.events]
             [ui.subs]
@@ -13,7 +14,7 @@
 
 (defn mount []
   (rf/clear-subscription-cache!)
-  (r/render [root] (.getElementById js/document "app")))
+  (rd/render [root] (.getElementById js/document "app")))
 
 (defn ^:export init []
   (rf/dispatch-sync [:initialize])
