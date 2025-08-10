@@ -24,5 +24,24 @@
     {:db/datasource {:jdbc-url (:jdbc-url db)}
      :http/server   {:port 3000 :ds (ig/ref :db/datasource) :conf {:postmark postmark :app app}}}))
 
-(defn -main [& _]
-  (ig/init (system-map)))
+(defonce ^:private system* (atom nil))
+
+(defn start! []
+  (let [sys (ig/init (system-map))]
+    (reset! system* sys)
+    (println "[app.core] System started.")
+    :started))
+
+(defn stop!
+  []
+  (when-let [sys @system*]
+    (println "[app.core] Halting system…")
+    (ig/halt! sys)
+    (reset! system* nil)
+    (println "[app.core] System stopped.")
+    :stopped))
+
+(defn -main
+  [& _]
+  (stop!)
+  (start!))
