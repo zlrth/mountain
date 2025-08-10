@@ -4,7 +4,7 @@ End-to-end skeleton: add feed → backfill from Wayback (first 20 snapshots) →
 
 ## Quickstart
 1. Install: Java 17+, Leiningen, Postgres.
-2. Create DB `wayback_drip` and export `DATABASE_URL` env var.
+2. Create DB `Mountain` and export `DATABASE_URL` env var.
 3. Run migrations:
    ```bash
    lein migratus init

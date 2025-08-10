@@ -23,6 +23,6 @@
   :migratus {:store :database
              :migration-dir "migrations"
              :db {:jdbc-url #=(eval (or (System/getenv "DATABASE_URL")
-                                        "jdbc:postgresql://localhost:5432/wayback_drip?user=postgres&password=postgres"))}}
+                                        "jdbc:postgresql://localhost:5432/mountain?user=postgres&password=postgres"))}}
   :profiles {:dev {:dependencies [[hawk "0.2.11"]]
                    :source-paths ["dev"]}})

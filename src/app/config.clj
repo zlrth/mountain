@@ -4,7 +4,7 @@
   (or (System/getenv k) default))
 
 (defn cfg []
-  {:db {:jdbc-url (env "DATABASE_URL" "jdbc:postgresql://localhost:5432/wayback_drip?user=postgres&password=postgres")}
+  {:db {:jdbc-url (env "DATABASE_URL" "jdbc:postgresql://localhost:5432/mountain?user=postgres&password=postgres")}
    :postmark {:token (env "POSTMARK_SERVER_TOKEN")
               :from  (env "POSTMARK_FROM" "no-reply@example.com")
               :stream (env "POSTMARK_STREAM" "outbound")}
