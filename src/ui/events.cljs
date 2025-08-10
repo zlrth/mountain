@@ -18,9 +18,7 @@
 (defn log! [db msg]
   (update db :log conj (str (js/Date.) " — " msg)))
 
-(rf/reg-event-db
- :feed/url
- (fn [db [_ v]] (assoc db :feed/url v)))
+(rf/reg-event-db :feed/url (fn [db [_ v]] (assoc db :feed/url v)))
 
 (defn ->json [m] (.stringify js/JSON (clj->js m)))
 
