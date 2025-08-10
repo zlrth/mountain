@@ -1,0 +1,17 @@
+{
+  "name": "mountain",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "watch": "shadow-cljs watch app",
+    "release": "shadow-cljs release app",
+    "serve": "shadow-cljs watch app"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "shadow-cljs": "latest"
+  }
+}
