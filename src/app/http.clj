@@ -36,7 +36,7 @@
        ["/api/postmark/webhook"
         {:post (fn [_] (resp/ok {:ok true}))}]]
       {:data {:muuntaja muunt
-              :middleware [params/parameters
+              :middleware [params/parameters-middleware
                            muuntaja/format-middleware]}})
      (ring/create-default-handler))))
 
