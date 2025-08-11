@@ -5,7 +5,7 @@
 End-to-end skeleton: add feed → backfill from Wayback (first 20 snapshots) → create schedule → (email sender + webhook stubs).
 
 ## Quickstart
-1. Install: Java 17+, Leiningen, Postgres.
+1. Install: Java 21+, Leiningen, Postgres.
 2. Create DB `Mountain` and export `DATABASE_URL` env var.
 3. Run migrations:
    ```bash

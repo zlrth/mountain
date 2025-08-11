@@ -2,3 +2,5 @@ node_modules
 .nrepl-port
 .shadow-cljs
 package-lock.json
+public/js
+target
